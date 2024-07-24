@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Nurul</title>
     <link rel="stylesheet" href="src/output.css">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
+    </script>
 </head>
 <body>
     <!-- header start -->
@@ -23,27 +30,39 @@
                     <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
                 </button>
                 <nav id="nav-menu" class="hidden absolute py-5 bg-white
-                shadow-lg rounded-lg max-w-[250x] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark lg:dark:bg-transparent dark:shadow-slate-500">
                     <ul class="block lg:flex">
                         <li class="group">
                             <a href="#home" class="text-base text-dark py-2 mx-8 flex
-                            group-hover:text-primary">Beranda</a>
+                            group-hover:text-primary dark:text-white">Beranda</a>
                         </li>
                         <li class="group">
                             <a href="#about" class="text-base text-dark py-2 mx-8 flex
-                            group-hover:text-primary">Tentang Saya</a>
+                            group-hover:text-primary dark:text-white">Tentang Saya</a>
                         </li>
                         <li class="group">
                             <a href="#referensi" class="text-base text-dark py-2 mx-8 flex
-                            group-hover:text-primary">Referensi</a>
+                            group-hover:text-primary dark:text-white">Referensi</a>
                         </li>
                         <li class="group">
                             <a href="#blog" class="text-base text-dark py-2 mx-8 flex
-                            group-hover:text-primary">blog</a>
+                            group-hover:text-primary dark:text-white">blog</a>
                         </li>
                         <li class="group">
                             <a href="#contact" class="text-base text-dark py-2 mx-8 flex
-                            group-hover:text-primary">contact</a>
+                            group-hover:text-primary dark:text-white">contact</a>
+                        </li>
+                        <li class="mt-3 lg:mt-0 flex items-center pl-8">
+                            <div class="flex">
+                                <span class="mr-2 text-sm text-slate-500">light</span>
+                                <input type="checkbox" class="hidden" id="dark-toggle" />
+                                <label for="dark-toggle">
+                                    <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                                    </div>
+                                </label>
+                                <span class="ml-2 text-sm text-slate-500">dark</span>
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -55,28 +74,28 @@
      <!-- header end -->
 
 <!-- Hero sesction start -->
- <section id="home" class="pt-36">
+ <section id="home" class="pt-36 dark:bg-dark">
     <div class="container">
         <div class="flex flex-wrap">
             <div class="w-full self-center px-4 lg:w-1/2">
                 <h1 class="text-base font-semibold text-primary
                 md:text-xl ">Hallo Semua👋, 
                     saya <span class="block font-bold text-dark text-2xl mt-1
-                    lg:text-5xl">Nurul Fatimah</span></h1>
+                    lg:text-5xl dark:text-white">Nurul Fatimah</span></h1>
                 <p class="font-medium text-secondary text-lg mb-5 lg:text-2xl ">Mahasiswa  
-                    <span class="text-dark">semester 4</span></p>
+                    <span class="text-dark dark:text-white">semester 4</span></p>
                 <p class="font-medium text-secondary mb-10 leading-relaxed">Mereka belajar dari keinginan, sedangkan saya belajar dari keadaan
-                    <span class="text-dark font-bold">Menyenangkan bukan!</span></p>
+                    <span class="text-dark font-bold dark:text-white">Menyenangkan bukan!</span></p>
 
-                    <a href="#" class="text-base font-semibold text-white
+                    <a href="https://wa.me/6283119699933" class="text-base font-semibold text-white
                     bg-primary py-3 px-8 rounded-full hover:shadow-lg
                     hover:opacity-80 transition duration-300 ease-in-out"> Hubungi Saya</a>
             </div>
             <div class="w-full self-end px-4 lg:w-1/2 ">
                 <div class=" relative mt-10 lg:mt-0 lg:right-0">
                     <img src="src/img/nurulfatimah.png" alt="Nurul Fatimah"
-                    class="max-w-full mx-auto" />
-                    <span class="absolute -bottom-0 -z-10 left-1/2 -translate-x-1/2 
+                    class="relative z-10 max-w-full mx-auto" />
+                    <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 
                     md:scale-125">
                         <svg width="450" height="450" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#14b8a6" d="M57.4,-60.8C73.2,-55.1,84,-35.9,84.9,-17C85.8,1.9,76.8,20.5,
@@ -93,19 +112,19 @@
 <!-- Hero sesction end -->
 
 <!-- about section start -->
- <section id="about" class="pt-36 pb-32">
+ <section id="about" class="pt-36 pb-32  dark:bg-dark">
     <div class="container">
         <div class="flex flex-wrap">
             <div class="w-full px-4 mb-10 lg:w-1/2">
                 <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
-                <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text4xl">Yuk, Belajar Tentang bahasa pemrograman sebelum dipaksa keadaan</h2>
+                <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text4xl dark:text-white">Yuk, Belajar Tentang bahasa pemrograman sebelum dipaksa keadaan</h2>
                 <p class="font-medium text-base text-secondary
                 max-w-xl lg:text-lg">Belajar bahasa pemrograman itu mudah asal ada niat dan tekat untuk belajar,
             apalagi zaman sekarang banyak artifial intelligent (ai) yang bisa kita jadikan referensi untuk pengembangan pemrograman </p>
             </div>
             <div class="w-full px-4 lg:w-1/2">
                 <h3 class="font-semibold text-dark text-2xl mb-4
-                lg:text-3xl">Mari jadi teman</h3>
+                lg:text-3xl  dark:text-white">Mari jadi teman</h3>
                 <p class="font-medium text-base text-secondary mb-6">Halo, mari jadi teman supaya kita bisa belajar web pemrograman bersama dan juga bisa saling sharing tentang problem problem dalam web pemrograman
                 </p>
                 <div class="flex items-center">
@@ -161,14 +180,14 @@
  <!-- about section end -->
 
  <!-- portfolio section start -->
-  <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+  <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
     <div class="container">
         <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-16">
                 <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
-                <h2 class="font-blod text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Pengalaman Project</h2>
+                <h2 class="font-blod text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl  dark:text-white">Pengalaman Project</h2>
                 <p class="font-medium text-md text-secondary md:text-lg">
-                    pengalaman project saya dapatkan dari adanya praktikum per semester, termasuk praktikum web pemrogramansendiri
+                    pengalaman project saya dapatkan dari adanya praktikum per semester, termasuk praktikum web pemrograman sendiri
                 </p>
             </div>
         </div>
@@ -178,28 +197,28 @@
                 <div class="rounded-md shadow-md overflow-hidden">      
                     <img src="src/img/portfolio/port1.jpeg" alt="port1" class="w-full" />
                 </div>
-                <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Web Programming</h3>
+                <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Web Programming</h3>
                 <p class="font-medium text-base text-secondary">Pada semester 3, saya telah menyelesaikan praktikum web programming yang mempelajari native dan laravel serta bagaimana cara menggunakan boostrap </p>
             </div>
             <div class="mb-12 p-4 w-full lg:w-1/2">
                 <div class="rounded-md shadow-md overflow-hidden">      
                     <img src="src/img/portfolio/port2.jpeg" alt="port2" class="w-full" />
                 </div>
-                <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Design Method</h3>
+                <h3 class="font-semibold text-xl text-dark mt-5 mb-3  dark:text-white">Design Method</h3>
                 <p class="font-medium text-base text-secondary">Pada semester 1, saya telah selesai menjalani praktikum design method dimana saya mempelajari tentang flowhart, dfd dan juga use case yang digunakan ketika kita mau membuat kerangka/rencana suatu program</p>
             </div>
             <div class="mb-12 p-4 w-full md:w-1/2">
                 <div class="rounded-md shadow-md overflow-hidden">      
                     <img src="src/img/portfolio/port3.jpeg" alt="port3" class="w-full" />
                 </div>
-                <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Operations System</h3>
+                <h3 class="font-semibold text-xl text-dark mt-5 mb-3  dark:text-white">Operations System</h3>
                 <p class="font-medium text-base text-secondary">Pada semester 3, saya telah melewati praktikum Operations System yang mempelajari tentang operasi linux serta perintah perintah apa saja yang dapat kita lakukan didalamnya, dan juga kelebihannya dibanding windows</p>
             </div>
             <div class="mb-12 p-4 w-full md:w-1/2">
                 <div class="rounded-md shadow-md overflow-hidden">      
                     <img src="src/img/portfolio/port4.jpeg" alt="port4" class="w-full" />
                 </div>
-                <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Software Engineering</h3>
+                <h3 class="font-semibold text-xl text-dark mt-5 mb-3  dark:text-white">Software Engineering</h3>
                 <p class="font-medium text-base text-secondary">Pada semester 4, ada praktikum Software Engineering dimana pada final project kita membuat suatu aplikasi yang dinamis serta bermanfaat </p>
             </div>
         </div>
@@ -209,12 +228,12 @@
  <!-- portfolio section end -->
 
  <!-- referensi section start -->
-<section id="referensi" class="pt-36 pb-32 bg-slate-700">
+<section id="referensi" class="pt-36 pb-32 bg-slate-700 dark:bg-slate-300">
     <div class="container">
         <div class="w-full px-4">
             <div class=" mx-auto text-center mb-16">
                 <h4 class="font-semibold text-lg text-dark mb-2">Referensi</h4>
-                <h2 class="font-blod text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Situs yang saya jadikan pedoman</h2>
+                <h2 class="font-blod text-white text-3xl mb-4 sm:text-4xl lg:text-5xl  dark:text-dark">Situs yang saya jadikan referensi</h2>
                 <p class="font-medium text-md text-dark md:text-lg">Banyak situs yang saya manfaatkan untuk mencari referensi serta untuk mencari solusi dari setiap permasalahan di sebuah pemrograman</p>
             </div>
         </div>
@@ -237,12 +256,12 @@
 
 
  <!-- blog section start -->
-  <section id="blog" class="pt-36 pb-32 bg-slate-100">
+  <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
     <div class="container">
         <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-16">
                 <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
-                <h2 class="font-blod text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Informasi Seputar Informatika</h2>
+                <h2 class="font-blod text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl  dark:text-white">Informasi Seputar Informatika</h2>
                 <p class="font-medium text-md text-secondary md:text-lg">
                     pengalaman project saya dapatkan dari adanya praktikum per semester, termasuk praktikum web pemrograman sendiri
                 </p>
@@ -250,20 +269,20 @@
         </div>
         <div class="flex flex-wrap">
             <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
                     <img src="src/img/blog/pojok kampus.jpeg" alt="pojok kampus" class="w-full" />
                     <div class="py-8 px-6">
-                        <h3> <a href="https://www.brainacademy.id/blog/program-studi-teknik-informatika" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Mengenal Jurusan Teknik Informatika, Belajar Apa Saja Sih?</a></h3>
+                        <h3> <a href="https://www.brainacademy.id/blog/program-studi-teknik-informatika" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate  dark:text-white">Mengenal Jurusan Teknik Informatika, Belajar Apa Saja Sih?</a></h3>
                         <p class="font-medium text-base text-secondary mb-6">Teknik Informatika merupakan salah satu jurusan yang tidak pernah sepi peminat. Persaingan untuk bisa masuk jurusan ini juga sangat ketat, bahkan Fakultas Kedokteran mulai tergeser oleh Informatika.</p>
                             <a href="https://www.brainacademy.id/blog/program-studi-teknik-informatika" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
                     </div>
                 </div>
             </div>
             <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
                     <img src="src/img/blog/webdeveloper.jpeg" alt="web developer" class="w-full" />
                     <div class="py-8 px-6">
-                        <h3> <a href="https://www.gamelab.id/news/1716-7-alasan-mengapa-web-developer-jadi-profesi-yang-sangat-menjanjikan-sudah-tahu" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">7 Alasan Mengapa Web Developer Jadi Profesi yang Sangat Menjanjikan, Sudah Tahu?</a></h3>
+                        <h3> <a href="https://www.gamelab.id/news/1716-7-alasan-mengapa-web-developer-jadi-profesi-yang-sangat-menjanjikan-sudah-tahu" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate  dark:text-white">7 Alasan Mengapa Web Developer Jadi Profesi yang Sangat Menjanjikan, Sudah Tahu?</a></h3>
                         <p class="font-medium text-base text-secondary mb-6"> Saat ini, web developer adalah pekerjaan yang diimpikan banyak orang mengingat peluang karier dan gaji yang menjanjikan.  Dua faktor tersebut menjadi alasan 
                             mengapa karier sebagai web developer dipilih oleh banyak orang.!</p>
                             <a href="https://www.gamelab.id/news/1716-7-alasan-mengapa-web-developer-jadi-profesi-yang-sangat-menjanjikan-sudah-tahu" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
@@ -271,10 +290,10 @@
                 </div>
             </div>
             <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
                     <img src="src/img/blog/belajarweb.jpeg" alt="belajar web" class="w-full" />
                     <div class="py-8 px-6">
-                        <h3> <a href="https://www.jagoanhosting.com/blog/web-programming/" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Belajar Web Programming, Mulai dari Mana? Ini Tahapannya</a></h3>
+                        <h3> <a href="https://www.jagoanhosting.com/blog/web-programming/" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate  dark:text-white">Belajar Web Programming, Mulai dari Mana? Ini Tahapannya</a></h3>
                         <p class="font-medium text-base text-secondary mb-6">Web programming adalah proses pembuatan program berbasis. Kini, ia jadi salah satu bidang yang kian diminati, sejalan dengan meningkatnya 
                             kebutuhan akan programmer hingga beberapa tahun kedepan.</p>
                             <a href="https://www.jagoanhosting.com/blog/web-programming/" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
@@ -288,12 +307,12 @@
 
 
  <!-- contact section start -->
-  <section id="contact" class="pt-36 pb-32">
+  <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
     <div class="container">
         <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-16">
                 <h4 class="font-semibold text-lg text-primary mb-2">Contack</h4>
-                <h2 class="font-blod text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Hubungi saya</h2>
+                <h2 class="font-blod text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi saya</h2>
                 <p class="font-medium text-md text-secondary md:text-lg">
                     pengalaman project saya dapatkan dari adanya praktikum per semester, termasuk praktikum web pemrogramansendiri
                 </p>
@@ -427,6 +446,12 @@
     </div>
   </footer>
  <!-- footer section end-->
+
+ <!-- back to start -->
+  <a href="#home" class="fixed  bottom-4 right-4 z-[9999] hidden justify-center items-center p-4 h-14 w-14 bg-primary rounded-full hover:animate-pulse" id="to-top">
+    <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+  </a>
+ <!-- back to end -->
   <script src="src/js/script.js"></script>
 </body>
 </html>
